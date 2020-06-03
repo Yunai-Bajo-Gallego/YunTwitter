@@ -1,6 +1,5 @@
-'use strict';
-
-const e = React.createElement;
+import React from 'react'
+import ReactDOM from 'react-dom'
 
 class LikeButton extends React.Component {
   constructor(props) {
@@ -13,7 +12,7 @@ class LikeButton extends React.Component {
       return 'You liked this.';
     }
 
-    return e(
+    return (
       'button',
       { onClick: () => this.setState({ liked: true }) },
       'Like'
@@ -22,4 +21,4 @@ class LikeButton extends React.Component {
 }
 
 const domContainer = document.querySelector('#root');
-ReactDOM.render(e(LikeButton), domContainer);
+ReactDOM.render((LikeButton), domContainer);
