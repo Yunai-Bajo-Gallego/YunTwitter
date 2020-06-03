@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.js": "/YunTwitter/static/js/main.9f6c5b12.chunk.js",
+    "main.js.map": "/YunTwitter/static/js/main.9f6c5b12.chunk.js.map",
+    "runtime-main.js": "/YunTwitter/static/js/runtime-main.1939b732.js",
+    "runtime-main.js.map": "/YunTwitter/static/js/runtime-main.1939b732.js.map",
+    "static/js/2.7d6f3065.chunk.js": "/YunTwitter/static/js/2.7d6f3065.chunk.js",
+    "static/js/2.7d6f3065.chunk.js.map": "/YunTwitter/static/js/2.7d6f3065.chunk.js.map",
+    "index.html": "/YunTwitter/index.html",
+    "precache-manifest.daa13f414d191451bd2f10e1f9e088f0.js": "/YunTwitter/precache-manifest.daa13f414d191451bd2f10e1f9e088f0.js",
+    "service-worker.js": "/YunTwitter/service-worker.js",
+    "static/js/2.7d6f3065.chunk.js.LICENSE.txt": "/YunTwitter/static/js/2.7d6f3065.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/YunTwitter/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1939b732.js",
+    "static/js/2.7d6f3065.chunk.js",
+    "static/js/main.9f6c5b12.chunk.js"
+  ]
+}
