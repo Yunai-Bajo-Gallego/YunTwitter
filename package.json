@@ -3,7 +3,7 @@
   "name": "yuntwitter",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://yunai-bajo-gallego.github.io/YunTwitter/",
+  "homepage": ".",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
