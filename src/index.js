@@ -1,24 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import App from './App'
 
-class LikeButton extends React.Component {
+class Index extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { liked: false };
+   
   }
 
-  render() {
-    if (this.state.liked) {
-      return 'You liked this.';
-    }
 
-    return (
-      'button',
-      { onClick: () => this.setState({ liked: true }) },
-      'Like'
-    );
-  }
+
 }
 
 const domContainer = document.querySelector('#root');
-ReactDOM.render((LikeButton), domContainer);
+ReactDOM.render(<App/>, domContainer);
