@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import 'bootstrap/dist/css/bootstrap.css';
 import App from './components/App'
 import Login from './components/Login'
+import './index.css';
 
 class Index extends React.Component {
 

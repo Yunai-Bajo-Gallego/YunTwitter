@@ -2,17 +2,31 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 import Register from './Register'
+import Main from './Main'
+import '../index.css';
 
 class Login extends React.Component{
 
-    constructor(){
+    constructor(props){
         super()
-        this.state = {
-            checkRemember: true,
+        var datosLogin;
+        if(props.estado){//Caso datos cacheados o viene desde 'registro'
+            this.state = {
+                checkRemember: true,
+                nombreUsuario: props.estado.nombreUsuario,
+                email: props.estado.email,
+                password: props.estado.password,
+            }
         }
+        else{
+            this.state = {
+                checkRemember: true, 
+            }
+        }
+
         this.recordarDatos = this.recordarDatos.bind(this)
         this.irRegistro = this.irRegistro.bind(this)
-        
+        this.login = this.login.bind(this)
     }
 
     recordarDatos(){
@@ -29,6 +43,18 @@ class Login extends React.Component{
 
     irRegistro(){
         ReactDOM.render(<Register/>,document.getElementById('root'))
+    }
+
+    irPantallaPrincipal(){
+        ReactDOM.render(<Main/>,document.getElementById('root'))
+    }
+
+    login(){
+        var datosCorrectos = true //comprobarDatos
+
+        if(datosCorrectos){
+            this.irPantallaPrincipal()
+        }
     }
 
     render(){
@@ -50,10 +76,28 @@ class Login extends React.Component{
                                         </div>
                                         <form className="user">
                                             <div className="form-group">
-                                                <input type="email" className="form-control form-control-user" id="inputUser" aria-describedby="emailHelp" placeholder="Enter Email Address or username..."></input>
+                                                <input 
+                                                    type="email" 
+                                                    className="form-control form-control-user" 
+                                                    id="inputUser" 
+                                                    name="email"
+                                                    aria-describedby="emailHelp" 
+                                                    placeholder="Enter Email Address or username..."
+                                                    value={this.state.email != "" ? this.state.email : this.state.nombreUsuario}
+                                                    >
+                                                    
+                                                </input>
                                             </div>
                                             <div className="form-group">
-                                                <input type="password" className="form-control form-control-user" id="inputPass" placeholder="Password"></input>
+                                                <input 
+                                                    type="password" 
+                                                    className="form-control form-control-user" 
+                                                    id="inputPass" 
+                                                    name="password"
+                                                    placeholder="Password"
+                                                    value={this.state.password}
+                                                    >
+                                                </input>
                                             </div>
                                             <div className="form-group">
                                                 <div className="custom-control custom-checkbox small">
@@ -62,10 +106,10 @@ class Login extends React.Component{
                                                         className="custom-control-input" 
                                                         id="checkRemember" 
                                                         onChange={this.recordarDatos}></input>
-                                                    <label className="custom-control-label" for="checkRemember">Remember Me</label>
+                                                    <label className="custom-control-label" htmlFor="checkRemember">Remember Me</label>
                                                 </div>
                                             </div>
-                                            <button className="btn btn-primary btn-user btn-block">
+                                            <button className="btn btn-primary btn-user btn-block" onClick={this.login}>
                                                 Login
                                             </button>
                                         </form>
@@ -73,8 +117,11 @@ class Login extends React.Component{
                                         <div className="text-center">
                                             <a className="small" href="forgot-password.html">Forgot Password?</a>
                                         </div>
-                                        <div className="text-center">
+                                        {/* <div className="text-center">
                                             <button className="small" href={'./src/pages/register.html'}>Create an Account!</button>
+                                        </div> */}
+                                        <div className="text-center">
+                                            <button className="small btn btnPrincipal"  onClick={this.irRegistro}>Create an Account</button>
                                         </div>
                                     </div>
                                 </div>
