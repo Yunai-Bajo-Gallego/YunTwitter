@@ -18,4 +18,5 @@ class Index extends React.Component {
 }
 
 const domContainer = document.querySelector('#root');
+
 ReactDOM.render(<Login/>, domContainer);

@@ -114,9 +114,9 @@ class Login extends React.Component{
                                             </button>
                                         </form>
                                         <hr></hr>
-                                        <div className="text-center">
+                                        {/* <div className="text-center">
                                             <a className="small" href="forgot-password.html">Forgot Password?</a>
-                                        </div>
+                                        </div> */}
                                         {/* <div className="text-center">
                                             <button className="small" href={'./src/pages/register.html'}>Create an Account!</button>
                                         </div> */}

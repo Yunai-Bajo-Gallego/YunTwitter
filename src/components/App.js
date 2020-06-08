@@ -2,7 +2,9 @@ import React from 'react';
 
 class App {
 
-
+  constructor(){
+    
+  }
 
   render(){
     

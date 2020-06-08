@@ -1,8 +1,7 @@
 .tweet{
     padding: 20px;
     margin: 5px;
-    border: black;
-    border-radius: 2px;
+    border: rgb(200, 200, 200);
     border-style: solid;
-
+    background-color: rgb(240, 240, 240);
 }
